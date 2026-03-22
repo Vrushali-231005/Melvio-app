@@ -6,6 +6,7 @@ const songs = [
   { title: "Levitating", artist: "Dua Lipa", plays: "1.8M" },
 ];
 
+// trending song
 export function TrendingSong() {
   return (
     <View>
