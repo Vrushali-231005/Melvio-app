@@ -4,10 +4,7 @@ import { Sparkles } from "lucide-react-native";
 export function GreetingCard() {
   return (
     <View
-      className="relative rounded-[28px] p-6 overflow-hidden"
-      style={{
-        backgroundColor: "#edaa8a",
-      }}
+      className="relative rounded-[28px] p-6 overflow-hidden bg-light-card dark:bg-dark-card"
     >
       {/* Decorative circles */}
       <View className="absolute -top-8 -right-8 w-32 h-32 rounded-full bg-white/10" />
@@ -32,8 +29,7 @@ export function GreetingCard() {
         </View>
 
         <View
-          className="w-20 h-20 rounded-full overflow-hidden ml-4"
-          style={{ borderWidth: 4, borderColor: "rgba(255,255,255,0.3)" }}
+          className="w-20 h-20 rounded-full overflow-hidden ml-4 border-4 border-white/30"
         >
           <Image
             source={{

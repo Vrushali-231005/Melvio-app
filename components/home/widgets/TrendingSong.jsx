@@ -11,10 +11,9 @@ export function TrendingSong() {
   return (
     <View>
       <View className="flex-row items-center gap-2 mb-4 px-1">
-        <TrendingUp size={20} color="#b16a59" />
+        <TrendingUp size={20} className="text-light-primary dark:text-dark-primary" />
         <Text
-          className="font-quicksand-700 text-xl"
-          style={{ color: "#b16a59" }}
+          className="font-quicksand-700 text-xl text-light-primary dark:text-dark-primary"
         >
           Trending Now
         </Text>
@@ -24,14 +23,10 @@ export function TrendingSong() {
         {songs.map((song, index) => (
           <View
             key={index}
-            className="rounded-[24px] p-4 flex-row items-center gap-4"
-            style={{
-              backgroundColor: "#e89a7a",
-            }}
+            className="rounded-[24px] p-4 flex-row items-center gap-4 bg-light-secondary dark:bg-dark-secondary"
           >
             <View
-              className="w-14 h-14 rounded-2xl items-center justify-center"
-              style={{ backgroundColor: "rgba(255,255,255,0.25)" }}
+              className="w-14 h-14 rounded-2xl items-center justify-center bg-white/25"
             >
               <Music2 size={26} color="white" />
             </View>
@@ -51,8 +46,7 @@ export function TrendingSong() {
             </View>
 
             <Pressable
-              className="w-11 h-11 rounded-full items-center justify-center"
-              style={{ backgroundColor: "#b16a59" }}
+              className="w-11 h-11 rounded-full items-center justify-center bg-light-primary dark:bg-dark-primary"
             >
               <Play size={18} color="white" fill="white" />
             </Pressable>

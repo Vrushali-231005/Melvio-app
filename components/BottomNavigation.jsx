@@ -2,10 +2,11 @@ import { View, Text, Pressable } from "react-native";
 import { Home, Wand2, Mic2, Sparkles, User } from "lucide-react-native";
 import { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
+import { useTheme } from "./theme/ThemeContext";
 
 const navItems = [
   { icon: Home, label: "Home", route: "Home" },
-  { icon: Wand2, label: "Make", route: "Make" },
+  { icon: Wand2, label: "Theme", route: "Theme" },
   { icon: Mic2, label: "Sing", route: "Sing", isCenter: true },
   { icon: Sparkles, label: "Spotlight", route: "Spotlight" },
   { icon: User, label: "Me", route: "Profile" },
@@ -14,15 +15,11 @@ const navItems = [
 export function BottomNav() {
   const [activeTab, setActiveTab] = useState("Home");
   const navigation = useNavigation();
+  const { theme } = useTheme();
 
   return (
     <View
-      className="absolute bottom-0 w-full px-3 py-2"
-      style={{
-        backgroundColor: "rgba(237,170,138,0.95)",
-        borderTopWidth: 1,
-        borderColor: "rgba(177,106,89,0.2)",
-      }}
+      className="absolute bottom-0 w-full px-3 py-2 bg-light-card/95 dark:bg-dark-card/95 border-t border-light-primary/20 dark:border-dark-primary/20"
     >
       <View className="flex-row items-end justify-around relative">
         {/* Left side items */}
@@ -45,25 +42,23 @@ export function BottomNav() {
               <View
                 className={`items-center justify-center rounded-full shadow-lg ${
                   isCenter ? "w-14 h-14" : "w-10 h-10"
-                }`}
+                } bg-light-bg dark:bg-dark-bg`}
                 style={{
-                  backgroundColor: "#f4e2d1",
                   transform:
                     isActive && !isCenter ? [{ scale: 1.15 }] : [{ scale: 1 }],
                 }}
               >
                 <Icon
                   size={isCenter ? 24 : 18}
-                  color="#ea9178"
+                  color={theme.secondary}
                   strokeWidth={isActive || isCenter ? 2.5 : 2}
                 />
               </View>
 
               {/* Label */}
               <Text
-                className="text-[10px] mt-1 font-quicksand"
+                className="text-[10px] mt-1 font-quicksand text-white"
                 style={{
-                  color: "white",
                   opacity: isActive || isCenter ? 1 : 0.7,
                 }}
               >
@@ -99,9 +94,8 @@ export function BottomNav() {
                 <View
                   className={`items-center justify-center rounded-full shadow-lg ${
                     isCenter ? "w-14 h-14" : "w-10 h-10"
-                  }`}
+                  } bg-light-bg dark:bg-dark-bg`}
                   style={{
-                    backgroundColor: "#f4e2d1",
                     transform:
                       isActive && !isCenter
                         ? [{ scale: 1.15 }]
@@ -110,16 +104,15 @@ export function BottomNav() {
                 >
                   <Icon
                     size={isCenter ? 24 : 18}
-                    color="#ea9178"
+                    color={theme.secondary}
                     strokeWidth={isActive || isCenter ? 2.5 : 2}
                   />
                 </View>
 
                 {/* Label */}
                 <Text
-                  className="text-[10px] mt-1 font-quicksand"
+                  className="text-[10px] mt-1 font-quicksand text-white"
                   style={{
-                    color: "white",
                     opacity: isActive || isCenter ? 1 : 0.7,
                   }}
                 >
@@ -150,25 +143,23 @@ export function BottomNav() {
               <View
                 className={`items-center justify-center rounded-full shadow-lg ${
                   isCenter ? "w-14 h-14" : "w-10 h-10"
-                }`}
+                } bg-light-bg dark:bg-dark-bg`}
                 style={{
-                  backgroundColor: "#f4e2d1",
                   transform:
                     isActive && !isCenter ? [{ scale: 1.15 }] : [{ scale: 1 }],
                 }}
               >
                 <Icon
                   size={isCenter ? 24 : 18}
-                  color="#ea9178"
+                  color={theme.secondary}
                   strokeWidth={isActive || isCenter ? 2.5 : 2}
                 />
               </View>
 
               {/* Label */}
               <Text
-                className="text-[10px] mt-1 font-quicksand"
+                className="text-[10px] mt-1 font-quicksand text-white"
                 style={{
-                  color: "white",
                   opacity: isActive || isCenter ? 1 : 0.7,
                 }}
               >

@@ -16,10 +16,9 @@ export function MoodPicker() {
     <View>
       {/* Header */}
       <View className="flex-row items-center gap-2 mb-4 px-1">
-        <Smile size={20} color="#b16a59" />
+        <Smile size={20} className="text-light-primary dark:text-dark-primary" />
         <Text
-          className="font-quicksand-700 text-xl"
-          style={{ color: "#b16a59" }}
+          className="font-quicksand-700 text-xl text-light-primary dark:text-dark-primary"
         >
           How are you feeling?
         </Text>
@@ -34,20 +33,14 @@ export function MoodPicker() {
             <Pressable
               key={index}
               onPress={() => setSelectedMood(mood.label)}
-              className="w-[48%] rounded-[20px] py-5 px-4 mb-3 items-center justify-center"
-              style={{
-                backgroundColor: isSelected ? "#b16a59" : "#ea9178",
-              }}
+              className={`w-[48%] rounded-[20px] py-5 px-4 mb-3 items-center justify-center ${isSelected ? "bg-light-primary dark:bg-dark-primary" : "bg-light-secondary dark:bg-dark-secondary"}`}
             >
               {/* Emoji */}
               <Text className="text-3xl mb-1">{mood.emoji}</Text>
 
               {/* Label */}
               <Text
-                className="text-white font-quicksand-500"
-                style={{
-                  fontSize: isSelected ? 15 : 14,
-                }}
+                className={`text-white font-quicksand-500 ${isSelected ? "text-[15px]" : "text-[14px]"}`}
               >
                 {mood.label}
               </Text>

@@ -1,22 +1,23 @@
 import { View, Text, Pressable, Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Wand2, Sparkles, ArrowRight } from "lucide-react-native";
+import { useTheme } from "../../theme/ThemeContext";
 
 export function UniqueFeatures() {
+  const { theme } = useTheme();
+
   return (
     <View>
       {/* Header */}
       <View className="mb-4 px-1">
         <Text
-          className="text-xl font-quicksand-700 mb-1"
-          style={{ color: "#b16a59" }}
+          className="text-xl font-quicksand-700 mb-1 text-light-primary dark:text-dark-primary"
         >
           ✨ Discover Magic
         </Text>
 
         <Text
-          className="text-sm font-quicksand opacity-70"
-          style={{ color: "#b16a59" }}
+          className="text-sm font-quicksand opacity-70 text-light-primary dark:text-dark-primary"
         >
           Your creative playground awaits
         </Text>
@@ -26,27 +27,15 @@ export function UniqueFeatures() {
       <View className="gap-4">
         {/* AI SONG MAKER */}
         <LinearGradient
-          colors={["#ea9178", "#edaa8a"]}
+          colors={[theme.secondary, theme.card]}
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
-          style={{
-            borderRadius: 24,
-            padding: 20,
-            overflow: "hidden",
-          }}
+          className="rounded-2xl p-5 overflow-hidden"
         >
           <View>
             <View className="flex-row items-center mb-3">
               <View
-                style={{
-                  width: 40,
-                  height: 40,
-                  borderRadius: 20,
-                  backgroundColor: "rgba(255,255,255,0.25)",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginRight: 8,
-                }}
+                className="w-10 h-10 rounded-full bg-white/25 items-center justify-center mr-2"
               >
                 <Wand2 size={20} color="white" />
               </View>
@@ -68,15 +57,7 @@ export function UniqueFeatures() {
             </Text>
 
             <Pressable
-              style={{
-                backgroundColor: "#b16a59",
-                paddingVertical: 8,
-                paddingHorizontal: 16,
-                borderRadius: 30,
-                flexDirection: "row",
-                alignItems: "center",
-                alignSelf: "flex-start",
-              }}
+              className="bg-light-primary dark:bg-dark-primary py-2 px-4 rounded-full flex-row items-center self-start"
             >
               <Wand2 size={16} color="white" />
 
@@ -91,41 +72,22 @@ export function UniqueFeatures() {
 
         {/* SPOTLIGHT FEATURE */}
         <LinearGradient
-          colors={["#b16a59", "#c17a6a"]}
+          colors={[theme.primary, theme.accent]}
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
-          style={{
-            borderRadius: 24,
-            padding: 20,
-            overflow: "hidden",
-          }}
+          className="rounded-2xl p-5 overflow-hidden"
         >
           <Image
             source={{
               uri: "https://images.unsplash.com/photo-1594291714464-252c9da8447a",
             }}
-            style={{
-              position: "absolute",
-              bottom: 0,
-              right: 0,
-              width: 100,
-              height: 100,
-              opacity: 0.35,
-            }}
+            className="absolute bottom-0 right-0 w-24 h-24 opacity-35"
           />
 
           <View>
             <View className="flex-row items-center mb-3">
               <View
-                style={{
-                  width: 40,
-                  height: 40,
-                  borderRadius: 20,
-                  backgroundColor: "rgba(255,255,255,0.25)",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginRight: 8,
-                }}
+                className="w-10 h-10 rounded-full bg-white/25 items-center justify-center mr-2"
               >
                 <Sparkles size={20} color="white" />
               </View>
@@ -149,42 +111,18 @@ export function UniqueFeatures() {
             <View className="flex-row items-center">
               <View className="flex-row">
                 <View
-                  style={{
-                    marginLeft: -6,
-                    width: 32,
-                    height: 32,
-                    borderRadius: 16,
-                    backgroundColor: "rgba(255,255,255,0.2)",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
+                  className="ml-[-6px] w-8 h-8 rounded-full bg-white/20 items-center justify-center"
                 >
                   <Text>🎭</Text>
                 </View>
                 <View
-                  style={{
-                    marginLeft: -6,
-                    width: 32,
-                    height: 32,
-                    borderRadius: 16,
-                    backgroundColor: "rgba(255,255,255,0.2)",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
+                  className="ml-[-6px] w-8 h-8 rounded-full bg-white/20 items-center justify-center"
                 >
                   <Text>🎪</Text>
                 </View>
 
                 <View
-                  style={{
-                    marginLeft: -6,
-                    width: 32,
-                    height: 32,
-                    borderRadius: 16,
-                    backgroundColor: "rgba(255,255,255,0.2)",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
+                  className="ml-[-6px] w-8 h-8 rounded-full bg-white/20 items-center justify-center"
                 >
                   <Text>🎨</Text>
                 </View>

@@ -8,6 +8,7 @@ import {
 } from "@expo-google-fonts/quicksand";
 
 import AppNavigator from "./navigation/AppNavigator";
+import { ThemeProvider } from "./components/theme/ThemeContext";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -21,5 +22,9 @@ export default function App() {
     return null;
   }
 
-  return <AppNavigator />;
+  return (
+    <ThemeProvider>
+      <AppNavigator />
+    </ThemeProvider>
+  );
 }

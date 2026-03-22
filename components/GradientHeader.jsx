@@ -1,11 +1,13 @@
 import { View, Text } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Music } from "lucide-react-native";
+import { useTheme } from "./theme/ThemeContext";
 
 export default function GradientHeader({ title = "Welcome back !!" }) {
+  const { theme } = useTheme();
   return (
     <LinearGradient
-      colors={["#edaa8a", "rgba(244,226,209,0)"]}
+      colors={[theme.card, `${theme.bg}00`]}
       start={{ x: 0, y: 0 }}
       end={{ x: 0, y: 1 }}
       className="pt-12 pb-8 px-6"
@@ -20,7 +22,7 @@ export default function GradientHeader({ title = "Welcome back !!" }) {
             <Text
               className="text-3xl font-bold"
               style={{
-                color: "#ff9a76",
+                color: theme.secondary,
               }}
             >
               M
@@ -28,7 +30,7 @@ export default function GradientHeader({ title = "Welcome back !!" }) {
             <Text
               className="text-3xl font-bold"
               style={{
-                color: "#ff8a65",
+                color: theme.secondary,
               }}
             >
               e
@@ -36,7 +38,7 @@ export default function GradientHeader({ title = "Welcome back !!" }) {
             <Text
               className="text-3xl font-bold"
               style={{
-                color: "#ff7f50",
+                color: theme.secondary,
               }}
             >
               l
@@ -44,7 +46,7 @@ export default function GradientHeader({ title = "Welcome back !!" }) {
             <Text
               className="text-3xl font-bold ml-1"
               style={{
-                color: "#ff6b6b",
+                color: theme.accent,
               }}
             >
               v
@@ -52,7 +54,7 @@ export default function GradientHeader({ title = "Welcome back !!" }) {
             <Text
               className="text-3xl font-bold"
               style={{
-                color: "#ffa07a",
+                color: theme.accent,
               }}
             >
               i
@@ -60,7 +62,7 @@ export default function GradientHeader({ title = "Welcome back !!" }) {
             <Text
               className="text-3xl font-bold"
               style={{
-                color: "#ffb88c",
+                color: theme.accent,
               }}
             >
               o
@@ -69,8 +71,7 @@ export default function GradientHeader({ title = "Welcome back !!" }) {
         </View>
 
         <View
-          className="w-14 h-14 rounded-full items-center justify-center shadow-lg"
-          style={{ backgroundColor: "#b16a59" }}
+          className="w-14 h-14 rounded-full items-center justify-center shadow-lg bg-light-primary dark:bg-dark-primary"
         >
           <Music size={28} color="white" />
         </View>

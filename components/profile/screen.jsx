@@ -24,8 +24,8 @@ export default function Profile() {
   };
 
   return (
-    <View className="flex-1 items-center bg-[#e8d4c4]">
-      <View className="flex-1 w-full max-w-[430px] bg-[#f4e2d1]">
+    <View className="flex-1 items-center bg-light-bg dark:bg-dark-bg">
+      <View className="flex-1 w-full max-w-[430px] bg-light-bg dark:bg-dark-bg">
         <BackgroundEmoji />
 
         <ScrollView

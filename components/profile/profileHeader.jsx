@@ -1,11 +1,13 @@
 import { View, Text } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Music, Crown } from "lucide-react-native";
+import { useTheme } from "../theme/ThemeContext";
 
 export default function ProfileHeader() {
+  const { theme } = useTheme();
   return (
     <LinearGradient
-      colors={["#edaa8a", "#ea9178", "rgba(244,226,209,0)"]}
+      colors={[theme.card, theme.secondary, `${theme.bg}00`]}
       start={{ x: 0, y: 0 }}
       end={{ x: 0, y: 1 }}
       className="pt-14 pb-28 px-6"
@@ -20,7 +22,7 @@ export default function ProfileHeader() {
           <Text className="text-white text-3xl font-bold">Melvio</Text>
         </View>
 
-        <View className="w-14 h-14 bg-[#b16a59] rounded-full items-center justify-center">
+        <View className="w-14 h-14 bg-light-primary dark:bg-dark-primary rounded-full items-center justify-center">
           <Music size={26} color="white" />
         </View>
       </View>

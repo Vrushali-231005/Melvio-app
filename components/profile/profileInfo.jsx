@@ -6,30 +6,22 @@ export default function ProfileInfo() {
     <View className="gap-3">
       {/* Email */}
       <View
-        className="rounded-[20px] p-4 shadow-lg"
-        style={{
-          backgroundColor: "rgba(244, 226, 209, 0.95)",
-          borderWidth: 1,
-          borderColor: "rgba(237, 170, 138, 0.3)",
-        }}
+        className="rounded-[20px] p-4 shadow-lg bg-light-bg/95 dark:bg-dark-card/95 border border-light-card/30 dark:border-dark-card/30"
       >
         <View className="flex-row items-center gap-3">
           <View
-            className="w-11 h-11 rounded-full items-center justify-center shadow-md"
-            style={{ backgroundColor: "#ea9178" }}
+            className="w-11 h-11 rounded-full items-center justify-center shadow-md bg-light-secondary dark:bg-dark-secondary"
           >
             <Mail size={20} color="white" />
           </View>
           <View className="flex-1">
             <Text
-              className="text-xs mb-0.5"
-              style={{ color: "#b16a59", opacity: 0.7 }}
+              className="text-xs mb-0.5 text-light-primary/70 dark:text-dark-primary/70"
             >
               Email Address
             </Text>
             <Text
-              className="font-semibold text-sm"
-              style={{ color: "#b16a59" }}
+              className="font-semibold text-sm text-light-primary dark:text-dark-primary"
             >
               alex.johnson@melvio.com
             </Text>
@@ -39,30 +31,22 @@ export default function ProfileInfo() {
 
       {/* Age */}
       <View
-        className="rounded-[20px] p-4 shadow-lg"
-        style={{
-          backgroundColor: "rgba(244, 226, 209, 0.95)",
-          borderWidth: 1,
-          borderColor: "rgba(237, 170, 138, 0.3)",
-        }}
+        className="rounded-[20px] p-4 shadow-lg bg-light-bg/95 dark:bg-dark-card/95 border border-light-card/30 dark:border-dark-card/30"
       >
         <View className="flex-row items-center gap-3">
           <View
-            className="w-11 h-11 rounded-full items-center justify-center shadow-md"
-            style={{ backgroundColor: "#b16a59" }}
+            className="w-11 h-11 rounded-full items-center justify-center shadow-md bg-light-primary dark:bg-dark-primary"
           >
             <Cake size={20} color="white" />
           </View>
           <View className="flex-1">
             <Text
-              className="text-xs mb-0.5"
-              style={{ color: "#b16a59", opacity: 0.7 }}
+              className="text-xs mb-0.5 text-light-primary/70 dark:text-dark-primary/70"
             >
               Age
             </Text>
             <Text
-              className="font-semibold text-sm"
-              style={{ color: "#b16a59" }}
+              className="font-semibold text-sm text-light-primary dark:text-dark-primary"
             >
               22 years old
             </Text>
@@ -72,30 +56,22 @@ export default function ProfileInfo() {
 
       {/* Date Joined */}
       <View
-        className="rounded-[20px] p-4 shadow-lg"
-        style={{
-          backgroundColor: "rgba(244, 226, 209, 0.95)",
-          borderWidth: 1,
-          borderColor: "rgba(237, 170, 138, 0.3)",
-        }}
+        className="rounded-[20px] p-4 shadow-lg bg-light-bg/95 dark:bg-dark-card/95 border border-light-card/30 dark:border-dark-card/30"
       >
         <View className="flex-row items-center gap-3">
           <View
-            className="w-11 h-11 rounded-full items-center justify-center shadow-md"
-            style={{ backgroundColor: "#c17a6a" }}
+            className="w-11 h-11 rounded-full items-center justify-center shadow-md bg-light-accent dark:bg-dark-accent"
           >
             <Calendar size={20} color="white" />
           </View>
           <View className="flex-1">
             <Text
-              className="text-xs mb-0.5"
-              style={{ color: "#b16a59", opacity: 0.7 }}
+              className="text-xs mb-0.5 text-light-primary/70 dark:text-dark-primary/70"
             >
               Member Since
             </Text>
             <Text
-              className="font-semibold text-sm"
-              style={{ color: "#b16a59" }}
+              className="font-semibold text-sm text-light-primary dark:text-dark-primary"
             >
               January 15, 2026
             </Text>
